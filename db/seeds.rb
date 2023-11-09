@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+10.times do
+  Todo.create(
+    title: Faker::Lorem.sentence(word_count: 3),
+    description: Faker::Lorem.paragraph(sentence_count: 2),
+    done: rand(0..1))
+end
