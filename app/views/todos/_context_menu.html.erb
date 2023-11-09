@@ -1,0 +1,30 @@
+<div id="context-menu" data-context-menu-target="menu" class="hidden">
+  <%# "CREATE" todo %>
+  <%= link_to new_todo_path do %>
+    <i class="bi bi-plus-square"></i>
+    New Todo
+  <% end %>
+  <%# "READ" todo %>
+  <%= link_to "#", data: { context_menu_target: 'showLink' } do %>
+    <i class="bi bi-search"></i>
+    Show Todo
+  <% end %>
+  <%# "UPDATE" todo %>
+  <%= link_to "#", data: { context_menu_target: 'editLink' } do %>
+    <i class="bi bi-pencil-square"></i>
+    Edit Todo
+  <% end %>
+  <%# "DESTROY" todo %>
+  <%= link_to "#", data: {
+    context_menu_target: 'deleteLink',
+    confirm: 'Are you sure?',
+    turbo_method: :delete } do %>
+    <i class="bi bi-trash"></i>
+    Delete Todo
+  <% end %>
+  <%# Inactive Link %>
+  <%= link_to "#" do %>
+    <i class="bi bi-question-square"></i>
+    Goes Somewhere Else
+  <% end %>
+</div>
